@@ -76,9 +76,8 @@ function statusChangeCallback(response) {
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=385082698351411";
   fjs.parentNode.insertBefore(js, fjs);
-  window.location.reload();
 }(document, 'script', 'facebook-jssdk'));
-
+ window.location.reload();
  function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
