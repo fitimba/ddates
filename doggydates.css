@@ -21,3 +21,8 @@ margin-left:20px;
 .panel ,.panel-body{
   background-color:rgba(255,255,255,0.4);
 }
+
+.panel-footer {
+padding: 10px 15px;
+background-color: rgba(245,245,245, 0.6);
+}
