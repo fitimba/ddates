@@ -76,6 +76,7 @@ function statusChangeCallback(response) {
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=385082698351411";
   fjs.parentNode.insertBefore(js, fjs);
+  window.location.reload();
 }(document, 'script', 'facebook-jssdk'));
 
  function testAPI() {
@@ -85,21 +86,14 @@ function statusChangeCallback(response) {
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
             });
+            window.location.replace("http://stackoverflow.com");
             
   }
   
-  function statusChangeCallback(response) {
-    console.log('statusChangeCallback');
-    console.log(response);
-    // The response object is returned with a status field that lets the
-    // app know the current login status of the person.
-    // Full docs on the response object can be found in the documentation
-    // for FB.getLoginStatus().
-    if (response.status === 'connected') {
-      // Logged into your app and Facebook.
-      window.location.replace("http://stackoverflow.com");
-    }
-  }
+ 
+      
+ 
+
 </script>
 
 
