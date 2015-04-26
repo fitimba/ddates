@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+<meta charset=utf-8 />
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+  <script>
+
+    
+    var map;
+
+function initialize() {
+  var mapOptions = {
+    zoom: 12,
+     
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+
+  // Try HTML5 geolocation
+  if(navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var pos = new google.maps.LatLng(position.coords.latitude,
+                                       position.coords.longitude);
+
+      var marker = new google.maps.Marker({
+      position: pos,
+      map: map,
+           icon: "https://graph.facebook.com/fee.fofum/picture",
+      title: 'Hello World!',
+        animation:google.maps.Animation.BOUNCE
+  });
+           
+         
+      
+      map.setCenter(pos);
+    });
+  } 
+}
+
+    
+    
+google.maps.event.addDomListener(window, 'load', initialize);
+
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="doggydates.css">
+<link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<script src="http://getbootstrap.com/dist/js/bootstrap.js"></script>
+<link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="DDEXPLORE" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+   
+  <!-- For Android -->
+  <title>Doggy Dates</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="http://31.media.tumblr.com/7eaaac07f23f03cb51a296bd81d77569/tumblr_n0hpyugseU1st5lhmo1_1280.jpg">
+   
+ 
+<link rel="apple-touch-icon" href="http://31.media.tumblr.com/7eaaac07f23f03cb51a296bd81d77569/tumblr_n0hpyugseU1st5lhmo1_1280.jpg">
+<link rel="apple-touch-startup-image" href="http://31.media.tumblr.com/7eaaac07f23f03cb51a296bd81d77569/tumblr_n0hpyugseU1st5lhmo1_1280.jpg"> 
+<meta name="apple-mobile-web-app-capable" content="yes"> 
+<meta name="apple-mobile-web-app-status-bar-style" content="default">   
+  <title>Doggy Dates</title>
+  
+</head>
+  
+<body>
+  <div class="col-md-offset-3 col-md-6 ">
+  <div class="panel panel-warning">
+ 
+    <!-- Header -->
+    
+    <div class="panel-heading">
+    <div class="panel-title">
+      <h1><span class="scriptfont">E</span>xplore</h1>
+      <div class="right">
+      <span class="glyphicon glyphicon-heart "></span>
+      </div>
+      <h5> View all the pups in your area</h5>
+    </div>
+  </div>
+    
+   <!-- Body -->
+    
+  <div class="panel-body">
+    <br>
+     
+    
+<h4> Owners</h4>
+
+ <div class="row bordered">
+    <div class="col-md-4"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc3/t1/c0.0.200.200/p200x200/1908386_457121304414837_333597408_n.jpg" width="100%"><br><p class="center">Lewie<br>26 years old <br> Green Park</p></div>
+    <div class="col-md-4"><img src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn2/t1/1377513_10153380112700157_1204165247_n.jpg" width="100%"><br><p class="center">Ed<br>23 years old <br>Victoria Park</p ></div>
+   <div class="col-md-4"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn2/t1/c0.76.199.199/p200x200/1795579_284151585071833_289304473_n.jpg" width="100%"><br><p class="center">Akira<br>29 years old<br>Bushy Park<p></div>
+
+    </div>
+
+   <br>
+
+
+<div class="center">
+<div id="map-canvas"></div>
+<span class="glyphicon glyphicon-chevron-left"></span> See more <span class="glyphicon glyphicon-chevron-right"></span>
+</div>
+<br>
+
+<h4> Pups</h4>
+
+ <div class="row bordered">
+    <div class="col-md-4"><img src="http://img.allw.mn/www/thumbs/62/754.jpg" width="100%"><br><p class="center">Spot<br>14 years old (2 human years)</p></div>
+   <div class="col-md-4"><img src="http://webtaj.com/images/cute-dog-little-dogs-cups_55100.jpg" width="100%"><br><p class="center">Fifi<br>7 years old (1 human year)</p ></div>
+    <div class="col-md-4"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRc_9NNG8mSt8sSd3blzS30CldhnIAhG7Qhj0D8cL7yU1Hunik-" width="100%"><br><p class="center">Bingo<br>62 years old (9 human years)<p></div>
+    </div>
+    </div>
+
+   
+   <!-- Footer -->
+
+ <div class="panel-footer text-center">
+<div class="row bordered">
+    <div class="col-md-3"><a href="http://www.jsbin.com/doggydatesprofile/latest/quiet"><span class="glyphicon glyphicon-home"></span></br></br>Profile </a></div>
+    <div class="col-md-3"><span class="glyphicon glyphicon-globe"></span><br><br>Explore </div>
+   <div class="col-md-3"> <a href="http://www.jsbin.com/doggydateconnections/latest/quiet"><span class="glyphicon glyphicon-comment"></span><br><br>Connections </a></div>
+   <div class="col-md-3"><a href="http://www.jsbin.com/doggydatessettings/latest/quiet"><span class="glyphicon glyphicon-cog"></span><br><br>Settings </a></div>
+    </div>
+   
+  </div>
+</div>
+  </div>
+
+
+</body>
+</html>
